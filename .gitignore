@@ -1,0 +1,6 @@
+/vendor
+app/storage
+!gitignore
+/.phpintel
+.env
+!public

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit backupGlobals="false"
+         backupStaticAttributes="false"
+         bootstrap="bootstrap/autoload.php"
+         colors="true"
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true"
+         processIsolation="false"
+         stopOnFailure="false">
+    <testsuites>
+        <testsuite name="Application Test Suite">
+            <directory suffix="Test.php">./tests</directory>
+        </testsuite>
+    </testsuites>
+    <filter>
+        <whitelist processUncoveredFilesFromWhitelist="true">
+            <directory suffix=".php">./app</directory>
+            <exclude>
+                <file>./app/Http/routes.php</file>
+
+                <!--
+                <file>./Modules/Caja/Http/backendRoutes.php</file>
+                <file>./Modules/Clientes/Http/backendRoutes.php</file>
+                <file>./Modules/Compras/Http/backendRoutes.php</file>
+                <file>./Modules/Contabilidad/Http/backendRoutes.php</file>
+                <file>./Modules/Empleados/Http/backendRoutes.php</file>
+                <file>./Modules/Pagofacturascredito/Http/backendRoutes.php</file>
+                <file>./Modules/Productos/Http/backendRoutes.php</file>
+                <file>./Modules/Proveedores/Http/backendRoutes.php</file>
+                <file>./Modules/Servicios/Http/backendRoutes.php</file>
+                <file>./Modules/Ventas/Http/backendRoutes.php</file>
+
+                <file>./Modules/Core/Http/routes.php</file>
+                <file>./Modules/Dashboard/Http/backendRoutes.php</file>
+                <file>./Modules/Media/Http/apiRoutes.php</file>
+                <file>./Modules/Media/Http/backendRoutes.php</file>
+                <file>./Modules/Menu/Http/apiRoutes.php</file>
+                <file>./Modules/Menu/Http/backendRoutes.php</file>
+                <file>./Modules/Page/Http/backendRoutes.php</file>
+                <file>./Modules/Page/Http/frontendRoutes.php</file>
+                <file>./Modules/Setting/Http/backendRoutes.php</file>
+                <file>./Modules/Translation/Http/apiRoutes.php</file>
+                <file>./Modules/Translation/Http/backendRoutes.php</file>
+                <file>./Modules/User/Http/backendRoutes.php</file>
+                <file>./Modules/User/Http/frontendRoutes.php</file>
+                <file>./Modules/Workshop/Http/apiRoutes.php</file>
+                <file>./Modules/Workshop/Http/backendRoutes.php</file>
+              -->
+
+            </exclude>
+        </whitelist>
+    </filter>
+    <php>
+        <env name="APP_ENV" value="testing"/>
+        <env name="CACHE_DRIVER" value="array"/>
+        <env name="SESSION_DRIVER" value="array"/>
+        <env name="QUEUE_DRIVER" value="sync"/>
+    </php>
+</phpunit>
